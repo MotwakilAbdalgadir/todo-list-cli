@@ -67,8 +67,28 @@ def done():
         print(f"Done: {tasks[idx]['title']}")
 
 
+# ADDED: Search for tasks by keyword (case-insensitive).
+def search():
+    keyword = input("Search for task: ").strip().lower()
+
+    if not keyword:
+        print("Search cannot be empty.")
+        return
+
+    found = False
+    for i, task in enumerate(tasks, 1):
+        if keyword in task["title"].lower():
+            mark = "[x]" if task["done"] else "[ ]"
+            print(f"{i}. {mark} {task['title']}")
+            found = True
+
+    if not found:
+        print("No matching tasks found.")
+
+
 while True:
-    cmd = input("add / show / done / delete / quit: ").strip().lower()
+    # MODIFIED: Added 'search' to the available commands.
+    cmd = input("add / show / done / delete / search / quit: ").strip().lower()
     if cmd == "add":
         add()
     elif cmd == "show":
@@ -77,6 +97,9 @@ while True:
         done()
     elif cmd == "delete":
         delete()
+    # ADDED: Run the search function when the user selects 'search'.
+    elif cmd == "search":
+        search()
     elif cmd == "quit":
         break
     else:
