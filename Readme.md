@@ -17,6 +17,7 @@ project to practice Python programming and the Git/GitHub workflow
 - **Delete** a task
 - **Save automatically** to a `tasks.json` file, so tasks are kept after closing the program
 - Input validation (empty tasks and invalid task numbers are rejected)
+- - **Search Tasks:** Search for tasks by keyword and view their numbers and completion status.
 
 ## Requirements
 
