@@ -53,6 +53,9 @@ add / show / done / delete / search / quit: show
 1. [ ] Study for the exam
 add / show / done / delete / search / quit: done
 Task number to mark as done: 1
+add / show / done / delete / search / quit: search
+Search for task: Study
+1. [ ] Study for the exam
 ```
 
 ## Git Workflow
@@ -64,6 +67,7 @@ through a Pull Request:
 - `feature-mark-done` – added the done command and task status
 - `feature-save-tasks` – added saving to `tasks.json` and empty-input fix
 - `add-readme` – improved the documentation
+- `feature-search-task` – added task search functionality
 
 ## Contributors
 
